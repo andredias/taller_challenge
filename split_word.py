@@ -14,7 +14,7 @@ uvwxy
 """
 
 def split_word(word: str, number: int) -> list[str]:
-    incr = len(word) // number
+    incr = len(word) // number + len(word) % number
     result = []
     count = 0
     while count < len(word):

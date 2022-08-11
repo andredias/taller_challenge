@@ -15,12 +15,7 @@ uvwxy
 
 def split_word(word: str, number: int) -> list[str]:
     incr = len(word) // number + len(word) % number
-    result = []
-    count = 0
-    while count < len(word):
-        result.append(word[count:(count + incr)])
-        count += incr
-    return result
+    return [word[count:count + incr] for count in range(0, len(word), incr)]
 
 
 print(split_word('abcdefghijklmnopqrstuvwxy', 5))
